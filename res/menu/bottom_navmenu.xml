@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/reminder"
+        android:icon="@drawable/ic_baseline_notifications_24"
+        android:title="Reminder" />
+    <item
+        android:id="@+id/meditation"
+        android:icon="@drawable/meditation"
+        android:title="Meditation" />
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Home" />
+    <item
+        android:id="@+id/journaling"
+        android:icon="@drawable/ic_baseline_edit_note_24"
+        android:title="Journaling" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:title="Settings" />
+</menu>

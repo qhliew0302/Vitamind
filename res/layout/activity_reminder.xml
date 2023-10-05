@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF2EE"
+    tools:context=".ReminderActivity">
+
+    <TextView
+        android:id="@+id/ReminderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="serif"
+        android:text="Reminder"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ReminderIcon"
+        android:layout_width="63dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toStartOf="@+id/ReminderText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/reminder" />
+
+    <ImageView
+        android:id="@+id/AddButton"
+        android:layout_width="64dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ReminderIcon"
+        app:srcCompat="@drawable/add" />
+
+    <TextView
+        android:id="@+id/AddText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:background="#ffffff"
+        android:padding="15dp"
+        android:text="Add Reminder"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/AddButton"
+        app:layout_constraintTop_toBottomOf="@+id/ReminderText" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/eventList"
+        android:layout_width="350dp"
+        android:layout_height="225dp"
+        android:layout_margin="10dp"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddText">
+
+        <!--
+        In the above cardView widget
+        cardElevation property will give elevation to your card view
+        card corner radius will provide radius to your card view
+        card background color will give background color to your card view
+        card max elevation will give the cardView maximum elevation
+        card prevent corner overlap will add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners.
+        card use compact padding will add padding in API v21+ as well to have the same measurements with previous versions.
+        below are the two widgets imageview and text view we are displaying inside our card view.
+        -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="My Event"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_margin="10dp"
+            android:src="@drawable/calendar_icon" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/mainBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:itemIconTint="@drawable/bottom_navigation_selector"
+        app:itemTextColor="@drawable/bottom_navigation_selector"
+        app:menu="@menu/bottom_navmenu"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
